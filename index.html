@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="./register.js"></script>
+  <script src="./createUser.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -62,12 +63,77 @@
 		<div class="form-group">
             <input id="password2" type="password" class="form-control" placeholder="Repeat password" required="required">
         </div>
-        <div class="form-group">
+		<div class="form-group">
+        <input type="text" id="first" class="form-control" name="First Name" placeholder="First Name" required/>
+		</div>
+		<div class="form-group">
+        <input type = "text" id="last" class="form-control" name="Last Name" placeholder="Last Name" required/>
+		</div>
+		<div class="form-group">
+        <input type = "text" id="language" class="form-control" name="language" placeholder="Language" required/>
+		</div>
+        <!-- Dropdown -->
+		<div class="form-group">
+        <select class="form-control" id ="time-zone"name="time-zone" required>
+          <!-- The value attribute indicates what is sent when the form is submitted -->
+          <option value="Blank">Choose a timezone:</option>
+          <option value="ANAT">ANAT +12</option>
+          <option value="SBT">SBT +11</option>
+          <option value="AEST">AEST +10</option>
+          <option value="JST">JST +9</option>
+          <option value="CST8">CST +8</option>
+          <option value="WIB">WIB +7</option>
+          <option value="BST6">BST +6</option>
+          <option value="UZT">UZT +5</option>
+          <option value="GST">GST +4</option>
+          <option value="MSK">MSK +3</option>
+          <option value="CEST">CEST +2</option>
+          <option value="BST1">BST +1</option>
+          <option value="WET">WET +0</option>
+          <option value="CVT">CVT -1</option>
+          <option value="WGST">WGST -2</option>
+          <option value="ART">ART -3</option>
+          <option value="EDT">EDT -4</option>
+          <option value="CDT">CDT -5</option>
+          <option value="CST6">CST -6</option>
+          <option value="PDT">PDT -7</option>
+          <option value="AKDT">AKDT -8</option>
+          <option value="HDT">HDT -9</option>
+          <option value="HST">HST -10</option>
+          <option value="NUT">NUT -11</option>
+          <option value="AoE">AoE -12</option>
+          <option value="LINT">LINT +14</option>
+          <option value="TOT">TOT +13</option>
+          <option value="LHST">LHST +10:30</option>
+          <option value="ACST">ACST +9:30</option>
+          <option value="MMT">MMT +6:30</option>
+          <option value="IST">IST +5:30</option>
+          <option value="IRDT">IRDT +4:30</option>
+          <option value="NDT">NDT -2:30</option>
+          <option value="MART">MART -9:30</option>
+          <option value="CHAST">+12:45</option>
+          <option value="ACWST">ACWST +8:45</option>
+          <option value="NPT">NPT +5:45</option>
+        </select>
+		</div>
+
+	<div class="form-group">
+        <select class="form-control" id ="why" name="why" required>
+          <!-- The value attribute indicates what is sent when the form is submitted -->
+          <option value="Blank">Choose what you want a bud for:</option>
+          <option value="school">School</option>
+          <option value="work">Work</option>
+          <option value="hobbies">Hobbies</option>
+          <option value="exercise">Exercise</option>
+        </select>
+		</div>
+		
+		<div class="form-group">
+        <input type = "text" id="bio" class="form-control" name="bio" placeholder="Bio" />
+		</div>
+		<div class="form-group">
             <button onclick="register()" class="btn btn-block">Create Account</button>
         </div>
-        <div class="clearfix">
-            <a href="./login.html" class="float-left" >Already have an account? Log in here</a>
-        </div>        
     </form>
 </div>
 <br><br>
