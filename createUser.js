@@ -1,5 +1,4 @@
 function createUser(){
-    alert("createUser called");
     let xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://us-central1-accountability-buddy1.cloudfunctions.net/createUser', true);
 
@@ -13,7 +12,6 @@ function createUser(){
             if (xhr.status === OK) {
                 let docId = JSON.parse(xhr.responseText);
                 document.cookie = "docid =" + docId;
-				alert('create user');
                 window.location.href = "./profile-page.html";
             } else {
                 console.log('Error: ' + xhr.status);
