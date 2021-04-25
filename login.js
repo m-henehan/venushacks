@@ -8,7 +8,11 @@ let password = document.getElementById('password1').value
 firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in
-	alert("now logged in!");
+	var user = userCredential.user;
+            document.cookie = "accessToken=" + user.za;
+            document.cookie = "uid=" + user.uid;
+            console.log("User object", user);
+            window.location.href = "./profile-page.html";
 	
   })
   .catch((error) => {
